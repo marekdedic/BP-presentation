@@ -1,0 +1,619 @@
+
+@article{pevny_using_2016,
+	title = {Using Neural Network Formalism to Solve Multiple-Instance Problems},
+	url = {http://arxiv.org/abs/1609.07257},
+	abstract = {Many objects in the real world are difficult to describe by a single numerical vector of a fixed length, whereas describing them by a set of vectors is more natural. Therefore, Multiple instance learning ({MIL}) techniques have been constantly gaining on importance throughout last years. {MIL} formalism represents each object (sample) by a set (bag) of feature vectors (instances) of fixed length where knowledge about objects (e.g., class label) is available on bag level but not necessarily on instance level. Many standard tools including supervised classifiers have been already adapted to {MIL} setting since the problem got formalized in late nineties. In this work we propose a neural network ({NN}) based formalism that intuitively bridges the gap between {MIL} problem definition and the vast existing knowledge-base of standard models and classifiers. We show that the proposed {NN} formalism is effectively optimizable by a modified back-propagation algorithm and can reveal unknown patterns inside bags. Comparison to eight types of classifiers from the prior art on a set of 14 publicly available benchmark datasets confirms the advantages and accuracy of the proposed solution.},
+	journaltitle = {{arXiv}:1609.07257 [cs, stat]},
+	author = {Pevny, Tomas and Somol, Petr},
+	urldate = {2017-03-01},
+	date = {2016-09-23},
+	eprinttype = {arxiv},
+	eprint = {1609.07257},
+	keywords = {Computer Science - Learning, Statistics - Machine Learning},
+	file = {arXiv.org Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/TMZARQ23/1609.html:text/html}
+}
+
+@inproceedings{pevny_discriminative_2016,
+	location = {New York, {NY}, {USA}},
+	title = {Discriminative Models for Multi-instance Problems with Tree Structure},
+	isbn = {978-1-4503-4573-6},
+	url = {http://doi.acm.org/10.1145/2996758.2996761},
+	doi = {10.1145/2996758.2996761},
+	series = {{AISec} '16},
+	abstract = {Modelling network traffic is gaining importance to counter modern security threats of ever increasing sophistication. It is though surprisingly difficult and costly to construct reliable classifiers on top of telemetry data due to the variety and complexity of signals that no human can manage to interpret in full. Obtaining training data with sufficiently large and variable body of labels can thus be seen as a prohibitive problem. The goal of this work is to detect infected computers by observing their {HTTP}(S) traffic collected from network sensors, which are typically proxy servers or network firewalls, while relying on only minimal human input in the model training phase. We propose a discriminative model that makes decisions based on a computer's all traffic observed during a predefined time window (5 minutes in our case). The model is trained on traffic samples collected over equally-sized time windows for a large number of computers, where the only labels needed are (human) verdicts about the computer as a whole (presumed infected vs. presumed clean). As part of training, the model itself learns discriminative patterns in traffic targeted to individual servers and constructs the final high-level classifier on top of them. We show the classifier to perform with very high precision, and demonstrate that the learned traffic patterns can be interpreted as Indicators of Compromise. We implement the discriminative model as a neural network with special structure reflecting two stacked multi instance problems. The main advantages of the proposed configuration include not only improved accuracy and ability to learn from gross labels, but also automatic learning of server types (together with their detectors) that are typically visited by infected computers.},
+	pages = {83--91},
+	booktitle = {Proceedings of the 2016 {ACM} Workshop on Artificial Intelligence and Security},
+	publisher = {{ACM}},
+	author = {Pevny, Tomas and Somol, Petr},
+	urldate = {2017-03-01},
+	date = {2016},
+	keywords = {big data, learning indicators of compromise, malware detection, neural network, user modeling}
+}
+
+@article{gulcehre_noisy_2016,
+	title = {Noisy Activation Functions},
+	url = {http://arxiv.org/abs/1603.00391},
+	abstract = {Common nonlinear activation functions used in neural networks can cause training difficulties due to the saturation behavior of the activation function, which may hide dependencies that are not visible to vanilla-{SGD} (using first order gradients only). Gating mechanisms that use softly saturating activation functions to emulate the discrete switching of digital logic circuits are good examples of this. We propose to exploit the injection of appropriate noise so that the gradients may flow easily, even if the noiseless application of the activation function would yield zero gradient. Large noise will dominate the noise-free gradient and allow stochastic gradient descent toexplore more. By adding noise only to the problematic parts of the activation function, we allow the optimization procedure to explore the boundary between the degenerate (saturating) and the well-behaved parts of the activation function. We also establish connections to simulated annealing, when the amount of noise is annealed down, making it easier to optimize hard objective functions. We find experimentally that replacing such saturating activation functions by noisy variants helps training in many contexts, yielding state-of-the-art or competitive results on different datasets and task, especially when training seems to be the most difficult, e.g., when curriculum learning is necessary to obtain good results.},
+	journaltitle = {{arXiv}:1603.00391 [cs, stat]},
+	author = {Gulcehre, Caglar and Moczulski, Marcin and Denil, Misha and Bengio, Yoshua},
+	urldate = {2017-03-06},
+	date = {2016-03-01},
+	eprinttype = {arxiv},
+	eprint = {1603.00391},
+	keywords = {Computer Science - Learning, Computer Science - Neural and Evolutionary Computing, Statistics - Machine Learning},
+	file = {arXiv\:1603.00391 PDF:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/6XC4J6PI/Gulcehre et al. - 2016 - Noisy Activation Functions.pdf:application/pdf;arXiv.org Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/ABWZSR2D/1603.html:text/html}
+}
+
+@article{czarnecki_understanding_2017,
+	title = {Understanding Synthetic Gradients and Decoupled Neural Interfaces},
+	url = {http://arxiv.org/abs/1703.00522},
+	abstract = {When training neural networks, the use of Synthetic Gradients ({SG}) allows layers or modules to be trained without update locking - without waiting for a true error gradient to be backpropagated - resulting in Decoupled Neural Interfaces ({DNIs}). This unlocked ability of being able to update parts of a neural network asynchronously and with only local information was demonstrated to work empirically in Jaderberg et al (2016). However, there has been very little demonstration of what changes {DNIs} and {SGs} impose from a functional, representational, and learning dynamics point of view. In this paper, we study {DNIs} through the use of synthetic gradients on feed-forward networks to better understand their behaviour and elucidate their effect on optimisation. We show that the incorporation of {SGs} does not affect the representational strength of the learning system for a neural network, and prove the convergence of the learning system for linear and deep linear models. On practical problems we investigate the mechanism by which synthetic gradient estimators approximate the true loss, and, surprisingly, how that leads to drastically different layer-wise representations. Finally, we also expose the relationship of using synthetic gradients to other error approximation techniques and find a unifying language for discussion and comparison.},
+	journaltitle = {{arXiv}:1703.00522 [cs]},
+	author = {Czarnecki, Wojciech Marian and Świrszcz, Grzegorz and Jaderberg, Max and Osindero, Simon and Vinyals, Oriol and Kavukcuoglu, Koray},
+	urldate = {2017-03-27},
+	date = {2017-03-01},
+	eprinttype = {arxiv},
+	eprint = {1703.00522},
+	keywords = {Computer Science - Learning, Computer Science - Neural and Evolutionary Computing},
+	file = {arXiv\:1703.00522 PDF:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/KAFXM9H3/Czarnecki et al. - 2017 - Understanding Synthetic Gradients and Decoupled Ne.pdf:application/pdf;arXiv.org Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/4KE332W9/1703.html:text/html}
+}
+
+@article{vinyals_order_2015,
+	title = {Order Matters: Sequence to sequence for sets},
+	url = {http://arxiv.org/abs/1511.06391},
+	shorttitle = {Order Matters},
+	abstract = {Sequences have become first class citizens in supervised learning thanks to the resurgence of recurrent neural networks. Many complex tasks that require mapping from or to a sequence of observations can now be formulated with the sequence-to-sequence (seq2seq) framework which employs the chain rule to efficiently represent the joint probability of sequences. In many cases, however, variable sized inputs and/or outputs might not be naturally expressed as sequences. For instance, it is not clear how to input a set of numbers into a model where the task is to sort them; similarly, we do not know how to organize outputs when they correspond to random variables and the task is to model their unknown joint probability. In this paper, we first show using various examples that the order in which we organize input and/or output data matters significantly when learning an underlying model. We then discuss an extension of the seq2seq framework that goes beyond sequences and handles input sets in a principled way. In addition, we propose a loss which, by searching over possible orders during training, deals with the lack of structure of output sets. We show empirical evidence of our claims regarding ordering, and on the modifications to the seq2seq framework on benchmark language modeling and parsing tasks, as well as two artificial tasks -- sorting numbers and estimating the joint probability of unknown graphical models.},
+	journaltitle = {{arXiv}:1511.06391 [cs, stat]},
+	author = {Vinyals, Oriol and Bengio, Samy and Kudlur, Manjunath},
+	urldate = {2017-04-19},
+	date = {2015-11-19},
+	eprinttype = {arxiv},
+	eprint = {1511.06391},
+	keywords = {Computer Science - Computation and Language, Computer Science - Learning, Statistics - Machine Learning},
+	file = {arXiv\:1511.06391 PDF:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/ASJ97XD2/Vinyals et al. - 2015 - Order Matters Sequence to sequence for sets.pdf:application/pdf;arXiv.org Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/WSUZ6KAK/1511.html:text/html}
+}
+
+@article{kingma_adam:_2014,
+	title = {Adam: A Method for Stochastic Optimization},
+	url = {http://arxiv.org/abs/1412.6980},
+	shorttitle = {Adam},
+	abstract = {We introduce Adam, an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. The method is straightforward to implement, is computationally efficient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients. The hyper-parameters have intuitive interpretations and typically require little tuning. Some connections to related algorithms, on which Adam was inspired, are discussed. We also analyze the theoretical convergence properties of the algorithm and provide a regret bound on the convergence rate that is comparable to the best known results under the online convex optimization framework. Empirical results demonstrate that Adam works well in practice and compares favorably to other stochastic optimization methods. Finally, we discuss {AdaMax}, a variant of Adam based on the infinity norm.},
+	journaltitle = {{arXiv}:1412.6980 [cs]},
+	author = {Kingma, Diederik P. and Ba, Jimmy},
+	urldate = {2017-04-19},
+	date = {2014-12-22},
+	eprinttype = {arxiv},
+	eprint = {1412.6980},
+	keywords = {Computer Science - Learning},
+	file = {arXiv\:1412.6980 PDF:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/F3NRV8A4/Kingma and Ba - 2014 - Adam A Method for Stochastic Optimization.pdf:application/pdf;arXiv.org Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/UHTTRZWN/1412.html:text/html}
+}
+
+@article{dietterich_solving_1997,
+	title = {Solving the multiple instance problem with axis-parallel rectangles},
+	volume = {89},
+	issn = {0004-3702},
+	url = {http://www.sciencedirect.com/science/article/pii/S0004370296000343},
+	doi = {10.1016/S0004-3702(96)00034-3},
+	abstract = {The multiple instance problem arises in tasks where the training examples are ambiguous: a single example object may have many alternative feature vectors (instances) that describe it, and yet only one of those feature vectors may be responsible for the observed classification of the object. This paper describes and compares three kinds of algorithms that learn axis-parallel rectangles to solve the multiple instance problem. Algorithms that ignore the multiple instance problem perform very poorly. An algorithm that directly confronts the multiple instance problem (by attempting to identify which feature vectors are responsible for the observed classifications) performs best, giving 89\% correct predictions on a musk odor prediction task. The paper also illustrates the use of artificial data to debug and compare these algorithms.},
+	pages = {31--71},
+	number = {1},
+	journaltitle = {Artificial Intelligence},
+	shortjournal = {Artificial Intelligence},
+	author = {Dietterich, Thomas G. and Lathrop, Richard H. and Lozano-Pérez, Tomás},
+	urldate = {2017-05-31},
+	date = {1997-01-01},
+	keywords = {Drug design, Machine learning, Structure-activity relationships},
+	file = {ScienceDirect Full Text PDF:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/8TARSUSR/Dietterich et al. - 1997 - Solving the multiple instance problem with axis-pa.pdf:application/pdf;ScienceDirect Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/PSIMP84K/S0004370296000343.html:text/html}
+}
+
+@article{amores_multiple_2013,
+	title = {Multiple instance classification: Review, taxonomy and comparative study},
+	volume = {201},
+	issn = {0004-3702},
+	url = {http://www.sciencedirect.com/science/article/pii/S0004370213000581},
+	doi = {10.1016/j.artint.2013.06.003},
+	shorttitle = {Multiple instance classification},
+	abstract = {Multiple Instance Learning ({MIL}) has become an important topic in the pattern recognition community, and many solutions to this problem have been proposed until now. Despite this fact, there is a lack of comparative studies that shed light into the characteristics and behavior of the different methods. In this work we provide such an analysis focused on the classification task (i.e., leaving out other learning tasks such as regression). In order to perform our study, we implemented fourteen methods grouped into three different families. We analyze the performance of the approaches across a variety of well-known databases, and we also study their behavior in synthetic scenarios in order to highlight their characteristics. As a result of this analysis, we conclude that methods that extract global bag-level information show a clearly superior performance in general. In this sense, the analysis permits us to understand why some types of methods are more successful than others, and it permits us to establish guidelines in the design of new {MIL} methods.},
+	pages = {81--105},
+	journaltitle = {Artificial Intelligence},
+	shortjournal = {Artificial Intelligence},
+	author = {Amores, Jaume},
+	urldate = {2017-05-31},
+	date = {2013-08},
+	keywords = {Bag-of-Words, Codebook, Multi-instance learning},
+	file = {ScienceDirect Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/ATXBMISH/S0004370213000581.html:text/html}
+}
+
+@report{berners-lee_uniform_1994,
+	title = {Uniform Resource Locators ({URL})},
+	url = {https://tools.ietf.org/html/rfc1738},
+	pages = {1--25},
+	number = {1738},
+	institution = {{CERN}},
+	author = {Berners-Lee, Tim and Masinter, Larry and {McCahill}, Mark P.},
+	urldate = {2017-06-05},
+	date = {1994-12},
+	file = {:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/GMQHMWSH/rfc1738.txt:text/plain}
+}
+
+@report{mockapetris_domain_1987,
+	title = {Domain names - concepts and facilities},
+	url = {https://tools.ietf.org/html/rfc1034},
+	pages = {1--55},
+	number = {1034},
+	institution = {Network Working Group},
+	author = {Mockapetris, Paul V.},
+	urldate = {2017-06-24},
+	date = {1987-11},
+	file = {Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/GI3UEEKC/rfc1034.html:text/html}
+}
+
+@book{knuth_art_1968,
+	title = {The Art of Computer Programming},
+	isbn = {0-201-03801-3},
+	publisher = {Addison-Wesley},
+	author = {Knuth, Donald E.},
+	date = {1968},
+	langid = {english}
+}
+
+@inproceedings{zhou_neural_2002,
+	title = {Neural Networks for Multi-Instance Learning},
+	url = {http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/techrep02.pdf},
+	pages = {455--459},
+	booktitle = {Proceedings of the International Conference on Intelligent Information Technology, Beijing, China},
+	author = {Zhou, Zhi-Hua and Zhang, Min-Ling},
+	urldate = {2017-06-26},
+	date = {2002-08},
+	langid = {english}
+}
+
+@inproceedings{muandet_learning_2012,
+	title = {Learning from Distributions via Support Measure Machines},
+	url = {http://papers.nips.cc/paper/4825-learning-from-distributions-via-support-measure-machines},
+	pages = {10--18},
+	booktitle = {Advances in neural information processing systems},
+	author = {Muandet, Krikamol and Fukumizu, Kenji and Dinuzzo, Francesco and Schölkopf, Bernhard},
+	urldate = {2017-06-29},
+	date = {2012},
+	file = {Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/AWI9AER6/4825-learning-from-distributions-via-support-measure-machines.html:text/html}
+}
+
+@article{machlica_learning_2017,
+	title = {Learning detectors of malicious web requests for intrusion detection in network traffic},
+	url = {http://arxiv.org/abs/1702.02530},
+	abstract = {This paper proposes a generic classification system designed to detect security threats based on the behavior of malware samples. The system relies on statistical features computed from proxy log fields to train detectors using a database of malware samples. The behavior detectors serve as basic reusable building blocks of the multi-level detection architecture. The detectors identify malicious communication exploiting encrypted {URL} strings and domains generated by a Domain Generation Algorithm ({DGA}) which are frequently used in Command and Control (C\&C), phishing, and click fraud. Surprisingly, very precise detectors can be built given only a limited amount of information extracted from a single proxy log. This way, the computational requirements of the detectors are kept low which allows for deployment on a wide range of security devices and without depending on traffic context such as {DNS} logs, Whois records, webpage content, etc. Results on several weeks of live traffic from 100+ companies having 350k+ hosts show correct detection with a precision exceeding 95\% of malicious flows, 95\% of malicious {URLs} and 90\% of infected hosts. In addition, a comparison with a signature and rule-based solution shows that our system is able to detect significant amount of new threats.},
+	journaltitle = {{arXiv}:1702.02530 [cs, stat]},
+	author = {Machlica, Lukas and Bartos, Karel and Sofka, Michal},
+	urldate = {2017-06-29},
+	date = {2017-02-08},
+	eprinttype = {arxiv},
+	eprint = {1702.02530},
+	keywords = {Computer Science - Learning, Statistics - Machine Learning},
+	file = {arXiv.org Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/XWH2W575/1702.html:text/html}
+}
+
+@inproceedings{zhang_em-dd:_2002,
+	title = {{EM}-{DD}: An Improved Multiple-Instance Learning Technique},
+	url = {http://papers.nips.cc/paper/1959-em-dd-an-improved-multiple-instance-learning-technique.pdf},
+	shorttitle = {{EM}-{DD}},
+	pages = {1073--1080},
+	booktitle = {Advances in neural information processing systems},
+	author = {Zhang, Qi and Goldman, Sally A.},
+	urldate = {2017-07-01},
+	date = {2002}
+}
+
+@article{dempster_maximum_1977,
+	title = {Maximum Likelihood from Incomplete Data via the {EM} Algorithm},
+	volume = {39},
+	issn = {0035-9246},
+	url = {http://www.jstor.org/stable/2984875},
+	abstract = {A broadly applicable algorithm for computing maximum likelihood estimates from incomplete data is presented at various levels of generality. Theory showing the monotone behaviour of the likelihood and convergence of the algorithm is derived. Many examples are sketched, including missing value situations, applications to grouped, censored or truncated data, finite mixture models, variance component estimation, hyperparameter estimation, iteratively reweighted least squares and factor analysis.},
+	pages = {1--38},
+	number = {1},
+	journaltitle = {Journal of the Royal Statistical Society. Series B (Methodological)},
+	author = {Dempster, A. P. and Laird, N. M. and Rubin, D. B.},
+	urldate = {2017-07-01},
+	date = {1977}
+}
+
+@inproceedings{maron_framework_1998,
+	title = {A framework for multiple-instance learning},
+	url = {http://papers.nips.cc/paper/1346-a-framework-for-multiple-instance-learning.pdf},
+	pages = {570--576},
+	booktitle = {Advances in neural information processing systems},
+	author = {Maron, Oded and Lozano-Pérez, Tomás},
+	urldate = {2017-07-01},
+	date = {1998}
+}
+
+@inproceedings{wang_solving_2000,
+	location = {Stanford University, Stanford, {CA}, {USA}},
+	title = {Solving Multiple-Instance Problem: A Lazy Learning Approach},
+	url = {http://cogprints.org/2124/},
+	shorttitle = {Solving Multiple-Instance Problem},
+	abstract = {As opposed to traditional supervised learning, multiple-instance learning 
+    concerns the problem of classifying a bag of instances, given bags that are 
+    labeled by a teacher as being overall positive or negative. Current research 
+    mainly concentrates on adapting traditional concept learning to solve this 
+    problem. In this paper we investigate the use of lazy learning and Hausdorff 
+    distance to approach the multiple-instance problem. We present two variants of 
+    the K-nearest neighbor algorithm, called Bayesian-{KNN} and Citation-{KNN}, solving 
+    the multiple-instance problem. Experiments on the Drug discovery benchmark data 
+    show that both algorithms are competitive with the best ones conceived in the 
+    concept learning framework. Further work includes exploring of a combination of 
+    lazy and eager multiple-instance problem classifiers.},
+	eventtitle = {Seventeenth International Conference on Machine Learning},
+	pages = {1119--1125},
+	booktitle = {Proceedings of the Seventeenth International Conference on Machine Learning},
+	publisher = {Morgan Kaufmann},
+	author = {Wang, Jun and Zucker, Jean-Daniel},
+	editor = {Langley, Pat},
+	urldate = {2017-07-01},
+	date = {2000},
+	file = {Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/7C2WC3ZI/2124.html:text/html}
+}
+
+@book{dasarathy_nearest_1991,
+	title = {Nearest neighbor ({NN}) norms: nn pattern classification techniques},
+	isbn = {978-0-8186-5930-0},
+	shorttitle = {Nearest neighbor ({NN}) norms},
+	pagetotal = {474},
+	publisher = {{IEEE} Computer Society Press},
+	author = {Dasarathy, Belur V.},
+	date = {1991},
+	langid = {english},
+	note = {Google-Books-{ID}: k2dQAAAAMAAJ},
+	keywords = {Mathematics / Probability \& Statistics / General, Psychology / Cognitive Psychology}
+}
+
+@article{chen_miles:_2006,
+	title = {{MILES}: Multiple-Instance Learning via Embedded Instance Selection},
+	volume = {28},
+	issn = {0162-8828},
+	doi = {10.1109/TPAMI.2006.248},
+	shorttitle = {{MILES}},
+	abstract = {Multiple-instance problems arise from the situations where training class labels are attached to sets of samples (named bags), instead of individual samples within each bag (called instances). Most previous multiple-instance learning ({MIL}) algorithms are developed based on the assumption that a bag is positive if and only if at least one of its instances is positive. Although the assumption works well in a drug activity prediction problem, it is rather restrictive for other applications, especially those in the computer vision area. We propose a learning method, {MILES} (multiple-instance learning via embedded instance selection), which converts the multiple-instance learning problem to a standard supervised learning problem that does not impose the assumption relating instance labels to bag labels. {MILES} maps each bag into a feature space defined by the instances in the training bags via an instance similarity measure. This feature mapping often provides a large number of redundant or irrelevant features. Hence, 1-norm {SVM} is applied to select important features as well as construct classifiers simultaneously. We have performed extensive experiments. In comparison with other methods, {MILES} demonstrates competitive classification accuracy, high computation efficiency, and robustness to labeling uncertainty},
+	pages = {1931--1947},
+	number = {12},
+	journaltitle = {{IEEE} Transactions on Pattern Analysis and Machine Intelligence},
+	author = {Chen, Yixin and Bi, Jinbo and Wang, J. Z.},
+	date = {2006-12},
+	keywords = {1-norm support vector machine, Algorithms, Application software, Artificial Intelligence, classification accuracy, computer vision, drug activity prediction, drug activity prediction., Drugs, embedded instance selection, feature extraction, feature mapping, feature subset selection, image categorization, Image Enhancement, Image Interpretation, Computer-Assisted, Imaging, Three-Dimensional, Information Storage and Retrieval, Labeling, labeling uncertainty, learning (artificial intelligence), Learning systems, {MILES}, Multiple-instance learning, multiple-instance learning algorithms, object recognition, pattern classification, Reproducibility of Results, Robustness, Sensitivity and Specificity, supervised learning, support vector machine, Support vector machine classification, support vector machines, Uncertainty},
+	file = {IEEE Xplore Abstract Record:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/MWZ5J8PU/1717454.html:text/html}
+}
+
+@inproceedings{zhu_1-norm_2004,
+	title = {1-norm support vector machines},
+	url = {http://papers.nips.cc/paper/2450-1-norm-support-vector-machines.pdf},
+	pages = {49--56},
+	booktitle = {Advances in neural information processing systems},
+	author = {Zhu, Ji and Rosset, Saharon and Tibshirani, Robert and Hastie, Trevor J.},
+	urldate = {2017-07-01},
+	date = {2004}
+}
+
+@article{goodfellow_maxout_2013,
+	title = {Maxout networks},
+	url = {http://www.jmlr.org/proceedings/papers/v28/goodfellow13.pdf},
+	journaltitle = {{arXiv} preprint {arXiv}:1302.4389},
+	author = {Goodfellow, Ian J. and Warde-Farley, David and Mirza, Mehdi and Courville, Aaron and Bengio, Yoshua},
+	urldate = {2017-07-02},
+	date = {2013}
+}
+
+@report{martin_det_1997,
+	title = {The {DET} Curve in Assessment of Detection Task Performance},
+	url = {http://www.dtic.mil/docs/citations/ADA530509},
+	abstract = {We introduce the {DET} Curve as a means of representing performance on detection tasks that involve a tradeoff of error types. We discuss why we prefer it to the traditional {ROC} Curve and offer several examples of its use in speaker recognition and language recognition. We explain why it is likely to produce approximately linear curves. We also note special points that may be included on these curves, how they are used with multiple targets, and possible further applications.},
+	institution = {National Institute of Standards and Technology},
+	author = {Martin, A. and Doddington, G. and Kamm, T. and Ordowski, M. and Przybocki, M.},
+	urldate = {2017-07-02},
+	date = {1997},
+	file = {Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/ARSHTHJ4/ADA530509.html:text/html}
+}
+
+@software{lin_mlbase.jl:_2017,
+	title = {{MLBase}.jl: A set of functions to support the development of machine learning algorithms},
+	rights = {{MIT}},
+	url = {https://github.com/JuliaStats/MLBase.jl},
+	shorttitle = {{MLBase}.jl},
+	publisher = {Julia Statistics},
+	author = {Lin, Dahua},
+	urldate = {2017-07-03},
+	date = {2017-06-22},
+	note = {original-date: 2013-02-10T15:50:23Z},
+	file = {Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/D83EMEWP/MLBase.html:text/html}
+}
+
+@software{zea_roc.jl:_2015,
+	title = {{ROC}.jl: Receiver Operating Characteristic ({ROC}) Curve for Julia Language},
+	rights = {{MIT}},
+	url = {https://github.com/diegozea/ROC.jl},
+	shorttitle = {{ROC}.jl},
+	author = {Zea, Diego Javier},
+	urldate = {2017-07-03},
+	date = {2015-11-04},
+	note = {original-date: 2014-04-26T08:56:44Z},
+	file = {Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/XUWJDCDM/ROC.html:text/html}
+}
+
+@software{leeuwen_rocanalysis.jl:_2016,
+	title = {{ROCAnalysis}.jl: Receiver Operating Characteristics and functions for evaluation probabilistic binary classifiers},
+	rights = {{MIT}},
+	url = {https://github.com/davidavdav/ROCAnalysis.jl},
+	shorttitle = {{ROCAnalysis}.jl},
+	author = {Leeuwen, David van},
+	urldate = {2017-07-03},
+	date = {2016-12-08},
+	note = {original-date: 2014-03-13T08:23:30Z},
+	file = {Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/FH7UC6CW/ROCAnalysis.html:text/html}
+}
+
+@book{goodfellow_deep_2016,
+	location = {Cambridge, Massachusetts},
+	title = {Deep Learning},
+	isbn = {978-0-262-03561-3},
+	abstract = {"Written by three experts in the field,  Deep Learning is the only comprehensive book on the subject." -- Elon Musk, cochair of {OpenAI}; cofounder and {CEO} of Tesla and {SpaceXDeep} learning is a form of machine learning that enables computers to learn from experience and understand the world in terms of a hierarchy of concepts. Because the computer gathers knowledge from experience, there is no need for a human computer operator to formally specify all the knowledge that the computer needs. The hierarchy of concepts allows the computer to learn complicated concepts by building them out of simpler ones; a graph of these hierarchies would be many layers deep. This book introduces a broad range of topics in deep learning. The text offers mathematical and conceptual background, covering relevant concepts in linear algebra, probability theory and information theory, numerical computation, and machine learning. It describes deep learning techniques used by practitioners in industry, including deep feedforward networks, regularization, optimization algorithms, convolutional networks, sequence modeling, and practical methodology; and it surveys such applications as natural language processing, speech recognition, computer vision, online recommendation systems, bioinformatics, and videogames. Finally, the book offers research perspectives, covering such theoretical topics as linear factor models, autoencoders, representation learning, structured probabilistic models, Monte Carlo methods, the partition function, approximate inference, and deep generative models.  Deep Learning can be used by undergraduate or graduate students planning careers in either industry or research, and by software engineers who want to begin using deep learning in their products or platforms. A website offers supplementary material for both readers and instructors.},
+	pagetotal = {800},
+	publisher = {The {MIT} Press},
+	author = {Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron},
+	date = {2016-11-18}
+}
+
+@inproceedings{andrews_support_2003,
+	title = {Support vector machines for multiple-instance learning},
+	url = {http://papers.nips.cc/paper/2232-support-vector-machines-for-multiple-instance-learning.pdf},
+	pages = {577--584},
+	booktitle = {Advances in neural information processing systems},
+	author = {Andrews, Stuart and Tsochantaridis, Ioannis and Hofmann, Thomas},
+	urldate = {2017-07-04},
+	date = {2003}
+}
+
+@inproceedings{zhang_multiple_2006,
+	title = {Multiple instance boosting for object detection},
+	url = {http://papers.nips.cc/paper/2926-multiple-instance-boosting-for-object-detection.pdf},
+	pages = {1417--1424},
+	booktitle = {Advances in neural information processing systems},
+	author = {Zhang, Cha and Platt, John C. and Viola, Paul A.},
+	urldate = {2017-07-04},
+	date = {2006}
+}
+
+@inproceedings{gartner_multi-instance_2002,
+	title = {Multi-instance kernels},
+	volume = {2},
+	url = {http://sci2s.ugr.es/keel/pdf/algorithm/congreso/2002-Gartner-ICML.pdf},
+	pages = {179--186},
+	booktitle = {{ICML}},
+	author = {Gärtner, Thomas and Flach, Peter A. and Kowalczyk, Adam and Smola, Alexander J.},
+	urldate = {2017-07-04},
+	date = {2002}
+}
+
+@inproceedings{kwok_marginalized_2007,
+	title = {Marginalized Multi-Instance Kernels.},
+	volume = {7},
+	url = {http://www.aaai.org/Papers/IJCAI/2007/IJCAI07-145.pdf},
+	pages = {901--906},
+	booktitle = {{IJCAI}},
+	author = {Kwok, James T. and Cheung, Pak-Ming},
+	urldate = {2017-07-04},
+	date = {2007}
+}
+
+@report{haussler_convolution_1999,
+	title = {Convolution kernels on discrete structures},
+	url = {https://www.soe.ucsc.edu/sites/default/files/technical-reports/UCSC-CRL-99-10.pdf},
+	institution = {Technical report, Department of Computer Science, University of California at Santa Cruz},
+	author = {Haussler, David},
+	urldate = {2017-07-04},
+	date = {1999}
+}
+
+@article{cheplygina_multiple_2015,
+	title = {Multiple instance learning with bag dissimilarities},
+	volume = {48},
+	issn = {0031-3203},
+	url = {http://www.sciencedirect.com/science/article/pii/S0031320314002817},
+	doi = {10.1016/j.patcog.2014.07.022},
+	abstract = {Multiple instance learning ({MIL}) is concerned with learning from sets (bags) of objects (instances), where the individual instance labels are ambiguous. In this setting, supervised learning cannot be applied directly. Often, specialized {MIL} methods learn by making additional assumptions about the relationship of the bag labels and instance labels. Such assumptions may fit a particular dataset, but do not generalize to the whole range of {MIL} problems. Other {MIL} methods shift the focus of assumptions from the labels to the overall (dis)similarity of bags, and therefore learn from bags directly. We propose to represent each bag by a vector of its dissimilarities to other bags in the training set, and treat these dissimilarities as a feature representation. We show several alternatives to define a dissimilarity between bags and discuss which definitions are more suitable for particular {MIL} problems. The experimental results show that the proposed approach is computationally inexpensive, yet very competitive with state-of-the-art algorithms on a wide range of {MIL} datasets.},
+	pages = {264--275},
+	number = {1},
+	journaltitle = {Pattern Recognition},
+	shortjournal = {Pattern Recognition},
+	author = {Cheplygina, Veronika and Tax, David M. J. and Loog, Marco},
+	urldate = {2017-07-04},
+	date = {2015-01-01},
+	keywords = {Dissimilarity representation, drug activity prediction, Image classification, Multiple instance learning, Point set distance, Text categorization},
+	file = {ScienceDirect Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/C5PFMKXR/S0031320314002817.html:text/html}
+}
+
+@article{cauchy_methode_1847,
+	title = {Méthode générale pour la résolution des systemes d’équations simultanées},
+	volume = {25},
+	url = {https://www.cs.xu.edu/math/Sources/Cauchy/Orbits/1847%20CR%20536(383).pdf},
+	pages = {536--538},
+	number = {1847},
+	journaltitle = {Comp. Rend. Sci. Paris},
+	author = {Cauchy, Augustin},
+	urldate = {2017-07-04},
+	date = {1847}
+}
+
+@article{duchi_adaptive_2011,
+	title = {Adaptive Subgradient Methods for Online Learning and Stochastic Optimization},
+	volume = {12},
+	issn = {{ISSN} 1533-7928},
+	url = {http://www.jmlr.org/papers/v12/duchi11a.html},
+	pages = {2121--2159},
+	issue = {Jul},
+	journaltitle = {Journal of Machine Learning Research},
+	author = {Duchi, John and Hazan, Elad and Singer, Yoram},
+	urldate = {2017-07-04},
+	date = {2011},
+	file = {Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/DEGN23VC/duchi11a.html:text/html}
+}
+
+@article{zeiler_adadelta:_2012,
+	title = {{ADADELTA}: An Adaptive Learning Rate Method},
+	url = {http://arxiv.org/abs/1212.5701},
+	shorttitle = {{ADADELTA}},
+	abstract = {We present a novel per-dimension learning rate method for gradient descent called {ADADELTA}. The method dynamically adapts over time using only first order information and has minimal computational overhead beyond vanilla stochastic gradient descent. The method requires no manual tuning of a learning rate and appears robust to noisy gradient information, different model architecture choices, various data modalities and selection of hyperparameters. We show promising results compared to other methods on the {MNIST} digit classification task using a single machine and on a large scale voice dataset in a distributed cluster environment.},
+	journaltitle = {{arXiv}:1212.5701 [cs]},
+	author = {Zeiler, Matthew D.},
+	urldate = {2017-07-04},
+	date = {2012-12-22},
+	eprinttype = {arxiv},
+	eprint = {1212.5701},
+	keywords = {Computer Science - Learning},
+	file = {arXiv.org Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/QH46GTXC/1212.html:text/html}
+}
+
+@article{tieleman_lecture_2012,
+	title = {Lecture 6.5-rmsprop: Divide the gradient by a running average of its recent magnitude},
+	volume = {4},
+	shorttitle = {Lecture 6.5-rmsprop},
+	pages = {26--31},
+	number = {2},
+	journaltitle = {{COURSERA}: Neural networks for machine learning},
+	author = {Tieleman, Tijmen and Hinton, Geoffrey},
+	date = {2012}
+}
+
+@report{_cisco_2014,
+	title = {Cisco 2014 Annual Security Report},
+	url = {https://www.cisco.com/web/offer/gist_ty2_asset/Cisco_2014_ASR.pdf},
+	pages = {81},
+	institution = {Cisco Systems, Inc.},
+	date = {2014},
+	langid = {english}
+}
+
+@article{jaderberg_decoupled_2016,
+	title = {Decoupled Neural Interfaces using Synthetic Gradients},
+	url = {https://arxiv.org/abs/1608.05343},
+	journaltitle = {{arXiv} preprint {arXiv}:1608.05343},
+	author = {Jaderberg, Max and Czarnecki, Wojciech Marian and Osindero, Simon and Vinyals, Oriol and Graves, Alex and Kavukcuoglu, Koray},
+	urldate = {2017-07-06},
+	date = {2016},
+	langid = {english},
+	file = {Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/B93NQB59/1608.html:text/html}
+}
+
+@article{klambauer_self-normalizing_2017,
+	title = {Self-Normalizing Neural Networks},
+	url = {https://arxiv.org/abs/1706.02515},
+	journaltitle = {{arXiv} preprint {arXiv}:1706.02515},
+	author = {Klambauer, Günter and Unterthiner, Thomas and Mayr, Andreas and Hochreiter, Sepp},
+	urldate = {2017-07-06},
+	date = {2017},
+	file = {Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/6HS5G8ZP/1706.html:text/html}
+}
+
+@article{chen_image_2004,
+	title = {Image Categorization by Learning and Reasoning with Regions},
+	volume = {5},
+	issn = {{ISSN} 1533-7928},
+	url = {http://www.jmlr.org/papers/v5/chen04a.html},
+	pages = {913--939},
+	issue = {Aug},
+	journaltitle = {Journal of Machine Learning Research},
+	author = {Chen, Yixin and Wang, James Z.},
+	urldate = {2017-07-06},
+	date = {2004},
+	file = {Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/M5FF5FNU/chen04a.html:text/html}
+}
+
+@article{zhang_multi-instance_2009,
+	title = {Multi-instance clustering with applications to multi-instance prediction},
+	volume = {31},
+	issn = {0924-669X, 1573-7497},
+	url = {https://link.springer.com/article/10.1007/s10489-007-0111-x},
+	doi = {10.1007/s10489-007-0111-x},
+	abstract = {In the setting of multi-instance learning, each object is represented by a bag composed of multiple instances instead of by a single instance in a traditional learning setting. Previous works in this area only concern multi-instance prediction problems where each bag is associated with a binary (classification) or real-valued (regression) label. However, unsupervised multi-instance learning where bags are without labels has not been studied. In this paper, the problem of unsupervised multi-instance learning is addressed where a multi-instance clustering algorithm named Bamic is proposed. Briefly, by regarding bags as atomic data items and using some form of distance metric to measure distances between bags, Bamic adapts the popular k-Medoids algorithm to partition the unlabeled training bags into k disjoint groups of bags. Furthermore, based on the clustering results, a novel multi-instance prediction algorithm named Bartmip is developed. Firstly, each bag is re-represented by a k-dimensional feature vector, where the value of the i-th feature is set to be the distance between the bag and the medoid of the i-th group. After that, bags are transformed into feature vectors so that common supervised learners are used to learn from the transformed feature vectors each associated with the original bag’s label. Extensive experiments show that Bamic could effectively discover the underlying structure of the data set and Bartmip works quite well on various kinds of multi-instance prediction problems.},
+	pages = {47--68},
+	number = {1},
+	journaltitle = {Applied Intelligence},
+	shortjournal = {Appl Intell},
+	author = {Zhang, Min-Ling and Zhou, Zhi-Hua},
+	urldate = {2017-07-06},
+	date = {2009-08-01},
+	langid = {english},
+	file = {Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/BSNAI4G5/10.html:text/html}
+}
+
+@thesis{foulds_learning_2008,
+	title = {Learning Instance Weights in Multi-Instance Learning},
+	url = {http://researchcommons.waikato.ac.nz/handle/10289/2460},
+	abstract = {Multi-instance ({MI}) learning is a variant of supervised machine learning, where each learning example contains a bag of instances instead of just a single feature vector. {MI} learning has applications in areas such as drug activity prediction, fruit disease management and image classification.
+
+This thesis investigates the case where each instance has a weight value determining the level of influence that it has on its bag's class label. This is a more general assumption than most existing approaches use, and thus is more widely applicable. The challenge is to accurately estimate these weights in order to make predictions at the bag level.
+
+An existing approach known as {MILES} is retroactively identified as an algorithm that uses instance weights for {MI} learning, and is evaluated using a variety of base learners on benchmark problems. New algorithms for learning instance weights for {MI} learning are also proposed and rigorously evaluated on both artificial and real-world datasets. The new algorithms are shown to achieve better root mean squared error rates than existing approaches on artificial data generated according to the algorithms' underlying assumptions. Experimental results also demonstrate that the new algorithms are competitive with existing approaches on real-world problems.},
+	institution = {The University of Waikato},
+	type = {Thesis},
+	author = {Foulds, James Richard},
+	urldate = {2017-07-06},
+	date = {2008},
+	langid = {english},
+	file = {Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/HJKFVNMB/2460.html:text/html}
+}
+
+@inproceedings{zhou_multi-instance_2009,
+	location = {New York, {NY}, {USA}},
+	title = {Multi-instance Learning by Treating Instances As non-I.I.D. Samples},
+	isbn = {978-1-60558-516-1},
+	url = {http://doi.acm.org/10.1145/1553374.1553534},
+	doi = {10.1145/1553374.1553534},
+	series = {{ICML} '09},
+	abstract = {Previous studies on multi-instance learning typically treated instances in the bags as independently and identically distributed. The instances in a bag, however, are rarely independent in real tasks, and a better performance can be expected if the instances are treated in an non-i.i.d. way that exploits relations among instances. In this paper, we propose two simple yet effective methods. In the first method, we explicitly map every bag to an undirected graph and design a graph kernel for distinguishing the positive and negative bags. In the second method, we implicitly construct graphs by deriving affinity matrices and propose an efficient graph kernel considering the clique information. The effectiveness of the proposed methods are validated by experiments.},
+	pages = {1249--1256},
+	booktitle = {Proceedings of the 26th Annual International Conference on Machine Learning},
+	publisher = {{ACM}},
+	author = {Zhou, Zhi-Hua and Sun, Yu-Yin and Li, Yu-Feng},
+	urldate = {2017-07-06},
+	date = {2009}
+}
+
+@unpublished{vejmelka_fighting_2017,
+	title = {Fighting malicious software with machinel learning},
+	url = {https://www.youtube.com/watch?v=ZL-j8p718G8},
+	type = {Přednáška na konferenci},
+	howpublished = {Přednáška na konferenci},
+	author = {Vejmelka, Martin},
+	date = {2017},
+	langid = {english},
+	note = {Machine Learning Prague}
+}
+
+@article{mac_namee_problem_2002,
+	title = {The problem of bias in training data in regression problems in medical decision support},
+	volume = {24},
+	issn = {0933-3657},
+	url = {http://www.sciencedirect.com/science/article/pii/S0933365701000926},
+	doi = {10.1016/S0933-3657(01)00092-6},
+	abstract = {This paper describes a bias problem encountered in a machine learning approach to outcome prediction in anticoagulant drug therapy. The outcome to be predicted is a measure of the clotting time for the patient; this measure is continuous and so the prediction task is a regression problem. Artificial neural networks ({ANNs}) are a powerful mechanism for learning to predict such outcomes from training data. However, experiments have shown that an {ANN} is biased towards values more commonly occurring in the training data and is thus, less likely to be correct in predicting extreme values. This issue of bias in training data in regression problems is similar to the associated problem with minority classes in classification. However, this bias issue in classification is well documented and is an on-going area of research. In this paper, we consider stratified sampling and boosting as solutions to this bias problem and evaluate them on this outcome prediction problem and on two other datasets. Both approaches produce some improvements with boosting showing the most promise.},
+	pages = {51--70},
+	number = {1},
+	journaltitle = {Artificial Intelligence in Medicine},
+	shortjournal = {Artificial Intelligence in Medicine},
+	author = {Mac Namee, B. and Cunningham, P. and Byrne, S. and Corrigan, O. I.},
+	urldate = {2017-07-07},
+	date = {2002-01-01},
+	keywords = {Anticoagulant drug therapy, Artificial neural networks, Medical decision support, Regression},
+	file = {ScienceDirect Snapshot:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/U6QNTDXH/S0933365701000926.html:text/html}
+}
+
+@online{roelants_how_2017,
+	title = {How to implement a neural network Intermezzo 2},
+	url = {https://peterroelants.github.io/posts/neural_network_implementation_intermezzo02/},
+	titleaddon = {Peter's notes},
+	author = {Roelants, Peter},
+	urldate = {2017-07-08},
+	date = {2017},
+	langid = {english},
+	file = {Peter's Notes:/home/cisco/.mozilla/firefox/wqy8gqj5.default/zotero/storage/66VUWUIX/neural_network_implementation_intermezzo02.html:text/html}
+}
